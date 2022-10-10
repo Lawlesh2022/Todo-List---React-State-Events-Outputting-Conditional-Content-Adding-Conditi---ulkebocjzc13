@@ -3,15 +3,14 @@ import {useState} from 'react'
 import "./../styles/App.css";
 
 function App(){
-	const [input, setInput] = useState("");
+  const [input, setInput] = useState("");
   const [data, setData] = useState([]);
   const[editId, setEditId] = useState(0);
   const handleInput = (e)=>{
-       const input = e.target.value;
-       setInput(input);
+       const inputData = e.target.value;
+       setInput(inputData);
   }
-  const handleAdd = (e)=>{
-    e.preventDefault();
+  const handleAdd = (e)=>{   
     if(input!==""){
       setData([{id: `${input}-${Date.now()}`, input}, ...data])
       setInput("");
