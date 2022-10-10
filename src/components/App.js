@@ -31,7 +31,7 @@ function App(){
 	<div id="main">
 	<input id = "task" type = "text" value = {input} onChange = {handleInput}/>
       <button id = "btn" type = "submit" onClick = {handleAdd}>Add</button>
-      <ul>
+     
         {data.map((t)=>(  
   
          <li className = "list"><span key = {t.id}>{t.input}</span>
@@ -39,7 +39,7 @@ function App(){
              <button id = "del" onClick = {() =>handleDel(t.id)}>Del</button>
          </li>
         ))}
-      </ul>
+      
        
 	</div>
 	);
